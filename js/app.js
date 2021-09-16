@@ -23,11 +23,11 @@ function getData(val) {
     let new_url = url + val;
     fetch(new_url)
     .then((res) => {
-        //console.log(res);
+        console.log(res);
         return res.json();
     })
     .then((data) => {
-        //console.log(data["results"]);
+        console.log(data["results"]);
         let result = data["results"];
         rendering(result); 
     });
@@ -43,9 +43,9 @@ function rendering(result) {
     results.className = "cards";
     container.appendChild(results);
     result.forEach((ele) => {
-        //console.log(ele.name);
+        console.log(ele.name);
         results.appendChild(getCard(ele));
-        //console.log(results);
+        console.log(results);
     });
 } 
 
@@ -56,7 +56,7 @@ function getCard(ele) {
     cards.classList = "card";
     cards.style.width = "20rem";
 
-    //console.log(ele);
+    console.log(ele);
 
     cards.innerHTML = `
         <img src=${JSON.stringify(ele["image"].url)} class="card-img" alt=".." />
