@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5097dd0f88.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Superhero Wiki</title>  
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-main">
+            <div>
+                <img class="img" src="/images/superhero1.gif" alt="icon" height="125" width="125"/>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <form action="GET">
+            <input 
+                type="text"
+                class="form-control"
+                id="form-control"
+                placeholder="Search your Superhero!"
+            />
+            <button type="button" class="btn btn-secondary">Favourites<i class='fas fa-heart'></i></button>
+        </form>
+    </section>
+    <section id="container">
+        <div class="cards" id="cards"></div>
+    </section>
+    <hr>
+    <script src="/js/app.js"></script>
+</body>
+</html>

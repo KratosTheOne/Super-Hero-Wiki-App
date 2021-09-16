@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/issuperhero5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid black;
+    box-shadow: 48px -1px 17px black;
+}
+
+#nav-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 70vw;
+    display: flex;
+    margin: 20px auto;
+}
+
+form > button {
+    margin-left: 1em;
+    border-color: white;
+}
+
+.btn {
+    border-color: cornsilk;
+}
+
+.btn:active {
+    background-color: white !important;
+    color: black !important;
+}
+
+.form-control {
+    background-color: whitesmoke;
+    opacity: 1;
+    color: thistle;
+}
+
+.cards {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    color: black;
+}
+
+.card {
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: 1px solid;
+    box-shadow: transparent;
+}
+
+.card:hover {
+    transition: 1.5s transform; 
+}
+
+.card-img {
+    padding: 10px;
+    border-radius: 20px;
+    height: 250px;
+    width: 250px;
+    margin: auto;
+}
+
+.card-text {
+    font-weight: 800;
+    font-size: larger;
+}
+
+.card-text > li > span {
+    font-weight: 400;
+    font-size: medium;
+}
