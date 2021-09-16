@@ -1,6 +1,6 @@
 //1997185777116500
 
-const key = 1997185777116500
+const key = 1997185777116500;
 
 const url = `https://www.superheroapi.com/api.php/${key}/search/`;
 
