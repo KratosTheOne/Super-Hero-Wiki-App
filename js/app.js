@@ -12,7 +12,7 @@ form.addEventListener("keyup", (e) => {
     let val = form.value;
     console.log("Searching for: ", search);
     if(search.length < 3) {
-        document.getElementById('cards').innerHTML = "Add at least 3 characters";
+        document.getElementById('cards').innerHTML = "Please add more than 3 characters";
     } else {
         setTimeout(getData(search), 1000);
     }
@@ -23,11 +23,11 @@ function getData(val) {
     let new_url = url + val;
     fetch(new_url)
     .then((res) => {
-        console.log(res);
+        //console.log(res);
         return res.json();
     })
     .then((data) => {
-        console.log(data["results"]);
+        //console.log(data["results"]);
         let result = data["results"];
         rendering(result); 
     });
@@ -43,9 +43,9 @@ function rendering(result) {
     results.className = "cards";
     container.appendChild(results);
     result.forEach((ele) => {
-        console.log(ele.name);
+        //console.log(ele.name);
         results.appendChild(getCard(ele));
-        console.log(results);
+        //console.log(results);
     });
 } 
 
@@ -56,7 +56,7 @@ function getCard(ele) {
     cards.classList = "card";
     cards.style.width = "20rem";
 
-    console.log(ele);
+    //console.log(ele);
 
     cards.innerHTML = `
         <img src=${JSON.stringify(ele["image"].url)} class="card-img" alt=".." />
@@ -80,10 +80,4 @@ function getCard(ele) {
         </div>
     `;
     return cards;
-}
-
-// Add to favourites
-function favClick(ele)  {
-    console.log(ele);
-    console.log("Ok");
 }
